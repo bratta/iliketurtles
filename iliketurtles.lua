@@ -3,7 +3,7 @@
 
 local args = { ... }
 local filename = args[1]
-local url = "https://raw.github.com/bratta/iliketurtles/"
+local url = "https://raw.github.com/bratta/iliketurtles/master/"
 local response = http.get(url..filename..".lua").readAll()
 
 if response then
