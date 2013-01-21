@@ -14,12 +14,9 @@ function plant_tree()
     turtle.select(sapling_slot)
     turtle.place()
   end
-  -- Sometimes need to bonemeal more than once
-  while not turtle.detect() do
-    if turtle.getItemCount(bonemeal_slot) > 0 then
-      turtle.select(bonemeal_slot)
-      turtle.place()
-    end
+  if turtle.getItemCount(bonemeal_slot) > 0 then
+    turtle.select(bonemeal_slot)
+    turtle.place()
   end
 end
 
