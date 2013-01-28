@@ -70,10 +70,11 @@ function move_down()
 end
 
 function dig_up(number_of_blocks)
+  number_of_blocks = number_of_blocks or 1
   if number_of_blocks < 1 then
     return
   end
-  for y = 1, number_of_blocks - 1 do
+  for y = 1, number_of_blocks do
     while move_up() == false do
       turtle.digUp()
       turtle.suckUp()
@@ -89,7 +90,7 @@ function dig_down(number_of_blocks)
   if number_of_blocks < 1 then
     return
   end
-  for y = 1, number_of_blocks - 1 do
+  for y = 1, number_of_blocks do
     while move_down() == false do
       turtle.digDown()
       turtle.suckDown()
