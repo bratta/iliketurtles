@@ -9,12 +9,12 @@ local y_moved_from_origin = 0
 local z_moved_from_origin = 0
 
 function setup()
-  print "I will dig a square down to level 5 for you."
-  print "Place Ender chest in slot 1. Remaining slots should be empty."
-  print "Charge with a charging station, I will not eat coal."
-  print "Length of the square size?"
+  print("I will dig a square down to level 5 for you.")
+  print("Place Ender chest in slot 1. Remaining slots should be empty.")
+  print("Charge with a charging station, I will not eat coal.")
+  print("Length of the square size?")
   square_length = tonumber(io.read())
-  print "What is my current elevation?"
+  print("What is my current elevation?")
   depth = tonumber(io.read()) - 5
 end
 
@@ -147,8 +147,8 @@ end
 
 function main()
   total_blocks = square_length * square_length * depth
-  print "Digging a "..square_length.."x"..square_length.." hole to level 5"
-  print "For a total of "..total_blocks.." blocks mined."
+  print("Digging a " .. square_length .. "x" .. square_length .. " hole to level 5")
+  print("For a total of " .. total_blocks .. " blocks mined.")
 
   turn_left()
   dig_down()
@@ -179,7 +179,7 @@ function main()
   end
   go_home()
   dump_inventory()
-  print "Job's done!"
+  print("Job's done!")
 end
 
 setup()
