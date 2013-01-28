@@ -159,13 +159,13 @@ function main()
       end
       if x == square_length then
         -- Finished our last row at this level
-        if y != depth then
+        if y ~= depth then
           turn_right()
           dig_down()
         end
       else
         -- Hooray for the maths
-        if (((y % 2) ~= 0) && ((x % 2) == 0)) || (((y % 2) == 0) && ((x % 2) ~= 0)) then
+        if (((y % 2) ~= 0) and ((x % 2) == 0)) or (((y % 2) == 0) and ((x % 2) ~= 0)) then
           turn_left()
           dig_forward()
           turn_left()
