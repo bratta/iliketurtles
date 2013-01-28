@@ -35,20 +35,14 @@ function move_forward()
   end
 end
 
-function turn_left(num_times)
-  num_times = num_times or 1
-  for i = 1, num_times do
-    current_direction = (current_direction - 1) % 4
-    turtle.turnLeft()
-  end
+function turn_left()
+  current_direction = (current_direction - 1) % 4
+  turtle.turnLeft()
 end
 
-function turn_right(num_times)
-  num_times = num_times or 1
-  for i = 1, num_times do
-    current_direction = (current_direction + 1) % 4
-    turtle.turnRight()
-  end
+function turn_right()
+  current_direction = (current_direction + 1) % 4
+  turtle.turnRight()
 end
 
 function move_up()
