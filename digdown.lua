@@ -160,8 +160,13 @@ function main()
           dig_down()
         end
       else
-        -- Hooray for the maths
-        if (((y % 2) ~= 0) and ((x % 2) == 0)) or (((y % 2) == 0) and ((x % 2) ~= 0)) then
+        -- Even numbers are easy
+        if (square_length % 2) == 0 then
+          turn_left()
+          dig_forward()
+          turn_left()
+        -- Odd numbers are hard. Hooray for the maths
+        elseif (((y % 2) ~= 0) and ((x % 2) == 0)) or (((y % 2) == 0) and ((x % 2) ~= 0)) then
           turn_left()
           dig_forward()
           turn_left()
