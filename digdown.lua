@@ -52,7 +52,7 @@ function turn_right(num_times)
 end
 
 function move_up()
-  if turtle.moveUp() then
+  if turtle.up() then
     y_moved_from_origin = y_moved_from_origin + 1
     return true
   else
@@ -61,7 +61,7 @@ function move_up()
 end
 
 function move_down()
-  if turtle.moveDown() then
+  if turtle.down() then
     y_moved_from_origin = y_moved_from_origin - 1
     return true
   else
