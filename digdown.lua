@@ -85,6 +85,7 @@ function dig_up(number_of_blocks)
 end
 
 function dig_down(number_of_blocks)
+  number_of_blocks = number_of_blocks or 1
   if number_of_blocks < 1 then
     return
   end
