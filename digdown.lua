@@ -157,7 +157,10 @@ function main()
         -- Finished our last row at this level
         if y ~= depth then
           turn_right()
-          turn_right()
+          -- Odd numbers need a turnabout
+          if (square_length % 2) ~= 0 then
+            turn_right()
+          end
           dig_down()
         end
       else
