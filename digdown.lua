@@ -106,7 +106,7 @@ function dig_forward()
 end
 
 function go_home()
-  dig_up(y_moved_from_origin)
+  dig_up(math.abs(y_moved_from_origin))
   if current_direction == 0 then
     turn_right(2)
   elseif current_direction == 1 then
@@ -174,7 +174,6 @@ function main()
     end
   end
   go_home()
-  dump_inventory()
   print("Job's done!")
 end
 
