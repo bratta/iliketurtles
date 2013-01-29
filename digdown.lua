@@ -156,11 +156,8 @@ function main()
       if x == square_length then
         -- Finished our last row at this level
         if y ~= depth then
-          if (square_length % 2) == 0 then
-            turn_right()
-          else
-            turn_left()
-          end
+          turn_right()
+          turn_right()
           dig_down()
         end
       else
