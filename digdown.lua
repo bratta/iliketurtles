@@ -156,17 +156,15 @@ function main()
       if x == square_length then
         -- Finished our last row at this level
         if y ~= depth then
-          turn_right()
+          if (square_length % 2) == 0 then
+            turn_right()
+          else
+            turn_left()
+          end
           dig_down()
         end
       else
-        -- Even numbers are easy
-        if (square_length % 2) == 0 then
-          turn_left()
-          dig_forward()
-          turn_left()
-        -- Odd numbers are hard. Hooray for the maths
-        elseif (((y % 2) ~= 0) and ((x % 2) == 0)) or (((y % 2) == 0) and ((x % 2) ~= 0)) then
+        if (x % 2) == 0 then
           turn_left()
           dig_forward()
           turn_left()
