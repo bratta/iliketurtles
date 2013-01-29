@@ -177,6 +177,7 @@ function main()
     end
   end
   go_home()
+  dump_inventory()
   print("Job's done!")
 end
 
