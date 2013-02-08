@@ -78,7 +78,7 @@ function main()
       turtle.turnRight()
       turtle.turnRight()
       dig()
-      turtle.turn_left()
+      turtle.turnLeft()
       if i < 3 then
         dig_down()
       end
