@@ -44,7 +44,7 @@ end
 function dig()
   while turtle.detect() == true do
     turtle.dig()
-    turgle.suck()
+    turtle.suck()
   end
   if turtle.getItemCount(10) >= 1 then
     dump_inventory()
