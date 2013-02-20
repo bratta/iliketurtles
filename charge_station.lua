@@ -1,3 +1,16 @@
+--
+-- Charge Station
+-- by Bratta
+--
+
+-- Place a turtle with this script next to an MFE/MFSU/Batbox
+-- Place an ender chest on top of the turtle. Pair an ender pouch with said
+-- chest and keep this setup chunk loaded. Viola, you can charge from
+-- anywhere.
+
+-- TODO: Make it suck smarter. The problem is that turtles can't pick which slot to suck from a connected inventory.
+-- TODO: Use gates to determine when it is charged instead of waiting a static amount of time. The Gate Reader doesn't seem to pick up on fully charged items right now though.
+
 local suckjobs = 0
 
 function show_suckjobs()
