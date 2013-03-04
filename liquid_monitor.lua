@@ -12,7 +12,6 @@ local card_slot = 1
 local reader_side = "right"
 local redstone_side = "front"
 local threshold_pct = 0.75  -- Percent to reach before turning on redstone signal
-local threshold = capacity * threshold_pct
 
 reader = peripheral.wrap(reader_side)
 while true do
@@ -21,6 +20,7 @@ while true do
   a, b, c, info = reader.get(card_slot)
   capacity = info["capacity"]
   amount = info["amount"]
+  threshold = capacity * threshold_pct
   print("Amount: " .. tostring(amount))
   print("Capacity: " .. tostring(capacity))
   if amount == capacity then
