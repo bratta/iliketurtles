@@ -28,6 +28,6 @@ while true do
     else
       print("Out of books!")
     end
-    sleep(10)
   end
+  sleep(10)
 end
