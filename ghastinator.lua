@@ -6,7 +6,7 @@
 -- to slaughter the dreaded beasts.
 
 local control_input = "front"
-local ghast_side = "left"
+local ghast_side = "back"
 local pulse_side = "right"
 
 -- Turn off the ghast spawner initially. We're using redstone signal off = spawner off
@@ -31,5 +31,8 @@ while true do
     redstone.setOutput(ghast_side, true)
     sendKillPulse()
     sleep(2)
+  else
+    redstone.setOutput(ghast_side, false)
   end
+  sleep(1)
 end
